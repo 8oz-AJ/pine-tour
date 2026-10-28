@@ -4,13 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tour - Pure Magic Awaits</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
+
     <script>
       tailwind.config = {
         theme: {
@@ -23,6 +26,7 @@
         },
       };
     </script>
+
     <style>
       .hero-bg {
         background-image: url("HeroImage.png");
@@ -34,21 +38,28 @@
   <body
     class="w-full min-h-screen bg-[#cbe0ee] text-slate-800 overflow-x-hidden antialiased font-sans"
   >
+    <!-- 1. Top Bar / Header & Hero Section Container -->
     <div
       class="relative w-full min-h-screen hero-bg flex flex-col justify-between"
     >
+      <!-- Soft top shadow overlay for header contrast -->
       <div
         class="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-black/40 via-black/10 to-transparent pointer-events-none"
       ></div>
+
+      <!-- Header / Navigation Bar -->
       <header
         class="relative z-10 w-full px-6 md:px-16 py-6 flex items-center justify-between"
       >
+        <!-- Left Logo -->
         <div
           class="flex items-center space-x-2 text-white font-bold text-2xl tracking-tight cursor-pointer drop-shadow-md"
         >
           <span class="text-white text-2xl font-extrabold">&lt;/&gt;</span>
           <span class="text-2xl font-bold tracking-wide">Tour</span>
         </div>
+
+        <!-- Center Navigation Links -->
         <nav
           class="hidden md:flex items-center space-x-10 text-white/90 text-base font-medium drop-shadow"
         >
@@ -61,6 +72,7 @@
           <a href="#" class="hover:text-white transition-colors duration-200"
             >Contact</a
           >
+          <!-- User Profile Icon -->
           <a
             href="#"
             class="hover:text-white transition-colors duration-200 flex items-center"
@@ -81,6 +93,8 @@
             </svg>
           </a>
         </nav>
+
+        <!-- Far Right Language Badge -->
         <div class="flex items-center">
           <button
             class="w-10 h-10 rounded-full bg-white/90 hover:bg-white text-slate-900 font-bold text-xs flex items-center justify-center shadow-md transition-all transform hover:scale-105"
@@ -90,31 +104,42 @@
         </div>
       </header>
 
+      <!-- 2. Main Hero Content Stack -->
       <main
         class="relative z-10 flex-1 flex flex-col items-center justify-center text-center px-4 py-12"
       >
+        <!-- Pure Magic Title -->
         <h2
           class="font-condensed text-4xl sm:text-6xl md:text-7xl text-white/80 uppercase tracking-wider mb-[-0.25rem] sm:mb-[-0.75rem] drop-shadow-sm font-semibold"
         >
           PURE MAGIC
         </h2>
+
+        <!-- Giant Main Heading: AWAITS! -->
         <h1
           class="font-condensed text-8xl sm:text-[11rem] md:text-[15rem] leading-none text-white uppercase font-bold tracking-tight drop-shadow-md"
         >
           AWAITS!
         </h1>
+
+        <!-- Subtext / Year: 2024 -->
         <p
           class="font-condensed text-3xl sm:text-5xl text-white/90 tracking-widest mt-1 sm:mt-2 drop-shadow"
         >
           2024
         </p>
       </main>
+
+      <!-- Hero bottom soft gradient fade into the next section -->
       <div
         class="w-full h-24 bg-gradient-to-b from-transparent to-[#cbe0ee]"
       ></div>
     </div>
+
+    <!-- 3. Destination Cards Section -->
     <section class="max-w-7xl mx-auto px-6 py-8 -mt-12 relative z-20">
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Card 1: Terkhiin Tsagaan Lake -->
         <div
           class="relative h-80 rounded-3xl overflow-hidden shadow-lg border-2 border-white/40 group cursor-pointer transition-transform duration-300 hover:-translate-y-2"
         >
@@ -133,6 +158,8 @@
             </h3>
           </div>
         </div>
+
+        <!-- Card 2: Amarbayasgalant Monastery -->
         <div
           class="relative h-80 rounded-3xl overflow-hidden shadow-lg border-2 border-white/40 group cursor-pointer transition-transform duration-300 hover:-translate-y-2"
         >
@@ -145,12 +172,14 @@
             class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent flex items-center justify-center p-6 text-center"
           >
             <h3
-              class="font-condensed text-2xl text-white uppercase tracking-wider leading-snug"
+              class="font-condensed text-3xl text-white uppercase tracking-wider leading-snug"
             >
               Amarbayasgalant<br />Monastery
             </h3>
           </div>
         </div>
+
+        <!-- Card 3: Khuvsgul Lake -->
         <div
           class="relative h-80 rounded-3xl overflow-hidden shadow-lg border-2 border-white/40 group cursor-pointer transition-transform duration-300 hover:-translate-y-2"
         >
@@ -169,6 +198,8 @@
             </h3>
           </div>
         </div>
+
+        <!-- Card 4: Khorgiin Togoo -->
         <div
           class="relative h-80 rounded-3xl overflow-hidden shadow-lg border-2 border-white/40 group cursor-pointer transition-transform duration-300 hover:-translate-y-2"
         >
@@ -189,6 +220,8 @@
         </div>
       </div>
     </section>
+
+    <!-- 4. Destination of Our Agency (Map Section) -->
     <section class="max-w-7xl mx-auto px-6 py-16 text-center">
       <h2 class="text-3xl sm:text-4xl font-bold text-slate-800 tracking-tight">
         Destination of Our Agency
@@ -197,117 +230,477 @@
         Pack Your Bags And Get Ready
       </p>
 
+      <!-- Map Container -->
       <div
         class="mt-10 relative w-full h-[500px] md:h-[600px] rounded-3xl overflow-hidden shadow-md bg-[#d1e6f1] flex items-center justify-start p-6 md:p-12"
       >
-        <div4                                                            
-          style="
-            background-image: url(&quot;https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=1600&auto=format&fit=crop&quot;);
-            filter: grayscale(30%) contrast(90%);
-          "
+        <!-- Background Map graphic -->
+        <div
+          class="absolute inset-0 opacity-40 bg-cover bg-center transition-all duration-700"
+          style="background-image: url(&quot;Roadmap image.png&quot;)"
         ></div>
+
+        <!-- Map Location Markers & Hover Preview Cards -->
+        <!-- Pin 1: Sukhbaatar Square (Ulaanbaatar) -->
         <div
-          class="absolute right-[25%] top-[35%] z-0 hidden md:flex items-center justify-center"
+          id="pin-1"
+          class="absolute left-[78%] top-[45%] z-20 transition-all duration-300 opacity-80 hover:opacity-100 group"
         >
-          <div
-            class="w-4 h-4 rounded-full bg-indigo-600 animate-ping absolute"
-          ></div>
-          <div
-            class="w-4 h-4 rounded-full bg-indigo-600 border-2 border-white"
-          ></div>
+          <div class="relative flex items-center justify-center cursor-pointer">
+            <div
+              class="w-4 h-4 rounded-full bg-rose-500 animate-ping absolute"
+            ></div>
+            <div
+              class="w-5 h-5 rounded-full bg-rose-500 border-2 border-white shadow-lg"
+            ></div>
+
+            <!-- Circular Preview Card -->
+            <div
+              id="card-preview-1"
+              class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center bg-white/90 backdrop-blur-md rounded-2xl p-3 shadow-2xl border border-white/60 opacity-0 pointer-events-none translate-y-2 transition-all duration-300 group-hover:opacity-100 group-hover:pointer-events-auto group-hover:translate-y-0 z-30 min-w-[140px]"
+            >
+              <div
+                class="w-20 h-20 rounded-full overflow-hidden border-2 border-white shadow-md mb-2"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1541872703-74c5e44368f9?q=80&w=400&auto=format&fit=crop"
+                  class="w-full h-full object-cover"
+                  alt="Sukhbaatar Square"
+                />
+              </div>
+              <p
+                class="font-bold text-xs text-slate-800 text-center whitespace-nowrap"
+              >
+                Sukhbaatar square
+              </p>
+              <p class="text-[10px] text-slate-500 text-center">
+                Ulaanbaatar • Day 1
+              </p>
+            </div>
+          </div>
         </div>
+
+        <!-- Pin 2: Amarbayasgalant Monastery -->
         <div
-          class="absolute right-[40%] top-[20%] z-0 hidden md:flex items-center justify-center"
+          id="pin-2"
+          class="absolute left-[62%] top-[30%] z-20 transition-all duration-300 opacity-80 hover:opacity-100 group"
         >
-          <div
-            class="w-4 h-4 rounded-full bg-indigo-600 border-2 border-white"
-          ></div>
+          <div class="relative flex items-center justify-center cursor-pointer">
+            <div
+              class="w-4 h-4 rounded-full bg-indigo-600 animate-ping absolute"
+            ></div>
+            <div
+              class="w-5 h-5 rounded-full bg-indigo-600 border-2 border-white shadow-lg"
+            ></div>
+
+            <!-- Circular Preview Card -->
+            <div
+              id="card-preview-2"
+              class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center bg-white/90 backdrop-blur-md rounded-2xl p-3 shadow-2xl border border-white/60 opacity-0 pointer-events-none translate-y-2 transition-all duration-300 group-hover:opacity-100 group-hover:pointer-events-auto group-hover:translate-y-0 z-30 min-w-[140px]"
+            >
+              <div
+                class="w-20 h-20 rounded-full overflow-hidden border-2 border-white shadow-md mb-2"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1548013146-72479768bada?q=80&w=400&auto=format&fit=crop"
+                  class="w-full h-full object-cover"
+                  alt="Amarbayasgalant monastery"
+                />
+              </div>
+              <p
+                class="font-bold text-xs text-slate-800 text-center whitespace-nowrap"
+              >
+                Amarbayasgalant monastery
+              </p>
+              <p class="text-[10px] text-slate-500 text-center">
+                Bulgan • Day 2
+              </p>
+            </div>
+          </div>
         </div>
+
+        <!-- Pin 3: Khorgiin Togoo -->
         <div
-          class="absolute right-[45%] top-[55%] z-0 hidden md:flex items-center justify-center"
+          id="pin-3"
+          class="absolute left-[48%] top-[42%] z-20 transition-all duration-300 opacity-80 hover:opacity-100 group"
         >
-          <div
-            class="w-4 h-4 rounded-full bg-indigo-600 border-2 border-white"
-          ></div>
+          <div class="relative flex items-center justify-center cursor-pointer">
+            <div
+              class="w-4 h-4 rounded-full bg-emerald-600 animate-ping absolute"
+            ></div>
+            <div
+              class="w-5 h-5 rounded-full bg-emerald-600 border-2 border-white shadow-lg"
+            ></div>
+
+            <!-- Circular Preview Card -->
+            <div
+              id="card-preview-3"
+              class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center bg-white/90 backdrop-blur-md rounded-2xl p-3 shadow-2xl border border-white/60 opacity-0 pointer-events-none translate-y-2 transition-all duration-300 group-hover:opacity-100 group-hover:pointer-events-auto group-hover:translate-y-0 z-30 min-w-[140px]"
+            >
+              <div
+                class="w-20 h-20 rounded-full overflow-hidden border-2 border-white shadow-md mb-2"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=400&auto=format&fit=crop"
+                  class="w-full h-full object-cover"
+                  alt="Khorgiin togoo"
+                />
+              </div>
+              <p
+                class="font-bold text-xs text-slate-800 text-center whitespace-nowrap"
+              >
+                Khorgiin togoo
+              </p>
+              <p class="text-[10px] text-slate-500 text-center">
+                Arkhangai • Day 3
+              </p>
+            </div>
+          </div>
         </div>
-        <div class="relative z-10 w-full max-w-sm space-y-3">
+
+        <!-- Pin 4: Terkhiin Tsagaan Lake -->
+        <div
+          id="pin-4"
+          class="absolute left-[40%] top-[48%] z-20 transition-all duration-300 opacity-80 hover:opacity-100 group"
+        >
+          <div class="relative flex items-center justify-center cursor-pointer">
+            <div
+              class="w-4 h-4 rounded-full bg-sky-600 animate-ping absolute"
+            ></div>
+            <div
+              class="w-5 h-5 rounded-full bg-sky-600 border-2 border-white shadow-lg"
+            ></div>
+
+            <!-- Circular Preview Card -->
+            <div
+              id="card-preview-4"
+              class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center bg-white/90 backdrop-blur-md rounded-2xl p-3 shadow-2xl border border-white/60 opacity-0 pointer-events-none translate-y-2 transition-all duration-300 group-hover:opacity-100 group-hover:pointer-events-auto group-hover:translate-y-0 z-30 min-w-[140px]"
+            >
+              <div
+                class="w-20 h-20 rounded-full overflow-hidden border-2 border-white shadow-md mb-2"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=400&auto=format&fit=crop"
+                  class="w-full h-full object-cover"
+                  alt="Terkhiin tsagaan lake"
+                />
+              </div>
+              <p
+                class="font-bold text-xs text-slate-800 text-center whitespace-nowrap"
+              >
+                Terkhiin tsagaan lake
+              </p>
+              <p class="text-[10px] text-slate-500 text-center">
+                Arkhangai • Day 4
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pin 5: Khuvsgul Lake -->
+        <div
+          id="pin-5"
+          class="absolute left-[50%] top-[20%] z-20 transition-all duration-300 opacity-80 hover:opacity-100 group"
+        >
+          <div class="relative flex items-center justify-center cursor-pointer">
+            <div
+              class="w-4 h-4 rounded-full bg-blue-600 animate-ping absolute"
+            ></div>
+            <div
+              class="w-5 h-5 rounded-full bg-blue-600 border-2 border-white shadow-lg"
+            ></div>
+
+            <!-- Circular Preview Card -->
+            <div
+              id="card-preview-5"
+              class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center bg-white/90 backdrop-blur-md rounded-2xl p-3 shadow-2xl border border-white/60 opacity-0 pointer-events-none translate-y-2 transition-all duration-300 group-hover:opacity-100 group-hover:pointer-events-auto group-hover:translate-y-0 z-30 min-w-[140px]"
+            >
+              <div
+                class="w-20 h-20 rounded-full overflow-hidden border-2 border-white shadow-md mb-2"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=400&auto=format&fit=crop"
+                  class="w-full h-full object-cover"
+                  alt="Khuvsgul lake"
+                />
+              </div>
+              <p
+                class="font-bold text-xs text-slate-800 text-center whitespace-nowrap"
+              >
+                Khuvsgul lake
+              </p>
+              <p class="text-[10px] text-slate-500 text-center">
+                Khuvsgul • Day 5
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pin 2: Amarbayasgalant Monastery -->
+        <div
+          id="pin-2"
+          class="absolute left-[62%] top-[30%] z-20 transition-all duration-300 opacity-80 hover:opacity-100 group"
+        >
+          <div class="relative flex items-center justify-center cursor-pointer">
+            <div
+              class="w-4 h-4 rounded-full bg-indigo-600 animate-ping absolute"
+            ></div>
+            <div
+              class="w-5 h-5 rounded-full bg-indigo-600 border-2 border-white shadow-lg"
+            ></div>
+
+            <!-- Preview Card -->
+            <div
+              id="card-preview-2"
+              class="absolute bottom-8 left-1/2 -translate-x-1/2 w-48 bg-white/95 backdrop-blur-md rounded-2xl p-2.5 shadow-2xl border border-white/60 opacity-0 pointer-events-none translate-y-2 transition-all duration-300 group-hover:opacity-100 group-hover:pointer-events-auto group-hover:translate-y-0 z-30"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1548013146-72479768bada?q=80&w=400&auto=format&fit=crop"
+                class="w-full h-24 object-cover rounded-xl mb-2"
+                alt="Amarbayasgalant monastery"
+              />
+              <p class="font-bold text-xs text-slate-800">
+                Amarbayasgalant monastery
+              </p>
+              <p class="text-[10px] text-slate-500">Bulgan • Day 2</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pin 3: Khorgiin Togoo -->
+        <div
+          id="pin-3"
+          class="absolute left-[48%] top-[42%] z-20 transition-all duration-300 opacity-80 hover:opacity-100 group"
+        >
+          <div class="relative flex items-center justify-center cursor-pointer">
+            <div
+              class="w-4 h-4 rounded-full bg-emerald-600 animate-ping absolute"
+            ></div>
+            <div
+              class="w-5 h-5 rounded-full bg-emerald-600 border-2 border-white shadow-lg"
+            ></div>
+
+            <!-- Preview Card -->
+            <div
+              id="card-preview-3"
+              class="absolute bottom-8 left-1/2 -translate-x-1/2 w-48 bg-white/95 backdrop-blur-md rounded-2xl p-2.5 shadow-2xl border border-white/60 opacity-0 pointer-events-none translate-y-2 transition-all duration-300 group-hover:opacity-100 group-hover:pointer-events-auto group-hover:translate-y-0 z-30"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=400&auto=format&fit=crop"
+                class="w-full h-24 object-cover rounded-xl mb-2"
+                alt="Khorgiin togoo"
+              />
+              <p class="font-bold text-xs text-slate-800">Khorgiin togoo</p>
+              <p class="text-[10px] text-slate-500">Arkhangai • Day 3</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pin 4: Terkhiin Tsagaan Lake -->
+        <div
+          id="pin-4"
+          class="absolute left-[40%] top-[48%] z-20 transition-all duration-300 opacity-80 hover:opacity-100 group"
+        >
+          <div class="relative flex items-center justify-center cursor-pointer">
+            <div
+              class="w-4 h-4 rounded-full bg-sky-600 animate-ping absolute"
+            ></div>
+            <div
+              class="w-5 h-5 rounded-full bg-sky-600 border-2 border-white shadow-lg"
+            ></div>
+
+            <!-- Preview Card -->
+            <div
+              id="card-preview-4"
+              class="absolute bottom-8 left-1/2 -translate-x-1/2 w-48 bg-white/95 backdrop-blur-md rounded-2xl p-2.5 shadow-2xl border border-white/60 opacity-0 pointer-events-none translate-y-2 transition-all duration-300 group-hover:opacity-100 group-hover:pointer-events-auto group-hover:translate-y-0 z-30"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=400&auto=format&fit=crop"
+                class="w-full h-24 object-cover rounded-xl mb-2"
+                alt="Terkhiin tsagaan lake"
+              />
+              <p class="font-bold text-xs text-slate-800">
+                Terkhiin tsagaan lake
+              </p>
+              <p class="text-[10px] text-slate-500">Arkhangai • Day 4</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pin 5: Khuvsgul Lake -->
+        <div
+          id="pin-5"
+          class="absolute left-[50%] top-[20%] z-20 transition-all duration-300 opacity-80 hover:opacity-100 group"
+        >
+          <div class="relative flex items-center justify-center cursor-pointer">
+            <div
+              class="w-4 h-4 rounded-full bg-blue-600 animate-ping absolute"
+            ></div>
+            <div
+              class="w-5 h-5 rounded-full bg-blue-600 border-2 border-white shadow-lg"
+            ></div>
+
+            <!-- Preview Card -->
+            <div
+              id="card-preview-5"
+              class="absolute bottom-8 left-1/2 -translate-x-1/2 w-48 bg-white/95 backdrop-blur-md rounded-2xl p-2.5 shadow-2xl border border-white/60 opacity-0 pointer-events-none translate-y-2 transition-all duration-300 group-hover:opacity-100 group-hover:pointer-events-auto group-hover:translate-y-0 z-30"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=400&auto=format&fit=crop"
+                class="w-full h-24 object-cover rounded-xl mb-2"
+                alt="Khuvsgul lake"
+              />
+              <p class="font-bold text-xs text-slate-800">Khuvsgul lake</p>
+              <p class="text-[10px] text-slate-500">Khuvsgul • Day 5</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Left Floating Days List Stack with Translucent / Glassmorphism Style & Hover Triggers -->
+        <div class="relative z-20 w-full max-w-xs sm:max-w-sm space-y-3">
+          <!-- Day 1 -->
           <div
-            class="p-4 rounded-2xl bg-[#eee4d4]/90 backdrop-blur-md shadow-sm border border-white/50 flex items-center justify-between transition-transform hover:scale-[1.02]"
+            onmouseenter="highlightPin(1)"
+            onmouseleave="unhighlightPin(1)"
+            class="p-3.5 sm:p-4 rounded-2xl bg-white/35 hover:bg-white/60 backdrop-blur-md shadow-sm hover:shadow-lg border border-white/40 flex items-center justify-between cursor-pointer transition-all duration-300 transform hover:scale-[1.03]"
           >
             <div class="text-left">
-              <h4 class="font-bold text-slate-800 text-sm">
+              <h4 class="font-bold text-slate-900 text-xs sm:text-sm">
                 Sukhbaatar square
               </h4>
-              <p class="text-xs text-slate-500 font-medium mt-0.5">
+              <p class="text-[11px] text-slate-700 font-medium mt-0.5">
                 📍 Ulaanbaatar
               </p>
             </div>
             <span
-              class="px-3 py-1 rounded-full bg-white text-slate-700 font-semibold text-xs shadow-sm"
+              class="px-3 py-1 rounded-full bg-white/70 backdrop-blur-sm text-slate-800 font-semibold text-[10px] sm:text-xs shadow-sm"
               >DAY 1</span
             >
           </div>
+
+          <!-- Day 2 -->
           <div
-            class="p-4 rounded-2xl bg-[#92bec3]/80 backdrop-blur-md shadow-sm border border-white/50 flex items-center justify-between transition-transform hover:scale-[1.02]"
+            onmouseenter="highlightPin(2)"
+            onmouseleave="unhighlightPin(2)"
+            class="p-3.5 sm:p-4 rounded-2xl bg-white/35 hover:bg-white/60 backdrop-blur-md shadow-sm hover:shadow-lg border border-white/40 flex items-center justify-between cursor-pointer transition-all duration-300 transform hover:scale-[1.03]"
           >
             <div class="text-left">
-              <h4 class="font-bold text-slate-900 text-sm">
+              <h4 class="font-bold text-slate-900 text-xs sm:text-sm">
                 Amarbayasgalant monastery
               </h4>
-              <p class="text-xs text-slate-700 font-medium mt-0.5">📍 Bulgan</p>
+              <p class="text-[11px] text-slate-700 font-medium mt-0.5">
+                📍 Bulgan
+              </p>
             </div>
             <span
-              class="px-3 py-1 rounded-full bg-white/90 text-slate-800 font-semibold text-xs shadow-sm"
+              class="px-3 py-1 rounded-full bg-white/70 backdrop-blur-sm text-slate-800 font-semibold text-[10px] sm:text-xs shadow-sm"
               >DAY 2</span
             >
           </div>
+
+          <!-- Day 3 -->
           <div
-            class="p-4 rounded-2xl bg-[#a0d8cf]/80 backdrop-blur-md shadow-sm border border-white/50 flex items-center justify-between transition-transform hover:scale-[1.02]"
+            onmouseenter="highlightPin(3)"
+            onmouseleave="unhighlightPin(3)"
+            class="p-3.5 sm:p-4 rounded-2xl bg-white/35 hover:bg-white/60 backdrop-blur-md shadow-sm hover:shadow-lg border border-white/40 flex items-center justify-between cursor-pointer transition-all duration-300 transform hover:scale-[1.03]"
           >
             <div class="text-left">
-              <h4 class="font-bold text-slate-900 text-sm">Khorgiin togoo</h4>
-              <p class="text-xs text-slate-700 font-medium mt-0.5">
+              <h4 class="font-bold text-slate-900 text-xs sm:text-sm">
+                Khorgiin togoo
+              </h4>
+              <p class="text-[11px] text-slate-700 font-medium mt-0.5">
                 📍 Arkhangai
               </p>
             </div>
             <span
-              class="px-3 py-1 rounded-full bg-white/90 text-slate-800 font-semibold text-xs shadow-sm"
+              class="px-3 py-1 rounded-full bg-white/70 backdrop-blur-sm text-slate-800 font-semibold text-[10px] sm:text-xs shadow-sm"
               >DAY 3</span
             >
           </div>
+
+          <!-- Day 4 -->
           <div
-            class="p-4 rounded-2xl bg-[#98cfce]/80 backdrop-blur-md shadow-sm border border-white/50 flex items-center justify-between transition-transform hover:scale-[1.02]"
+            onmouseenter="highlightPin(4)"
+            onmouseleave="unhighlightPin(4)"
+            class="p-3.5 sm:p-4 rounded-2xl bg-white/35 hover:bg-white/60 backdrop-blur-md shadow-sm hover:shadow-lg border border-white/40 flex items-center justify-between cursor-pointer transition-all duration-300 transform hover:scale-[1.03]"
           >
             <div class="text-left">
-              <h4 class="font-bold text-slate-900 text-sm">
+              <h4 class="font-bold text-slate-900 text-xs sm:text-sm">
                 Terkhiin tsagaan lake
               </h4>
-              <p class="text-xs text-slate-700 font-medium mt-0.5">
+              <p class="text-[11px] text-slate-700 font-medium mt-0.5">
                 📍 Arkhangai
               </p>
             </div>
             <span
-              class="px-3 py-1 rounded-full bg-white/90 text-slate-800 font-semibold text-xs shadow-sm"
+              class="px-3 py-1 rounded-full bg-white/70 backdrop-blur-sm text-slate-800 font-semibold text-[10px] sm:text-xs shadow-sm"
               >DAY 4</span
             >
           </div>
+
+          <!-- Day 5 -->
           <div
-            class="p-4 rounded-2xl bg-[#a3c2d6]/80 backdrop-blur-md shadow-sm border border-white/50 flex items-center justify-between transition-transform hover:scale-[1.02]"
+            onmouseenter="highlightPin(5)"
+            onmouseleave="unhighlightPin(5)"
+            class="p-3.5 sm:p-4 rounded-2xl bg-white/35 hover:bg-white/60 backdrop-blur-md shadow-sm hover:shadow-lg border border-white/40 flex items-center justify-between cursor-pointer transition-all duration-300 transform hover:scale-[1.03]"
           >
             <div class="text-left">
-              <h4 class="font-bold text-slate-900 text-sm">Khuvsgul lake</h4>
-              <p class="text-xs text-slate-700 font-medium mt-0.5">
+              <h4 class="font-bold text-slate-900 text-xs sm:text-sm">
+                Khuvsgul lake
+              </h4>
+              <p class="text-[11px] text-slate-700 font-medium mt-0.5">
                 📍 Khuvsgul
               </p>
             </div>
             <span
-              class="px-3 py-1 rounded-full bg-white/90 text-slate-800 font-semibold text-xs shadow-sm"
+              class="px-3 py-1 rounded-full bg-white/70 backdrop-blur-sm text-slate-800 font-semibold text-[10px] sm:text-xs shadow-sm"
               >DAY 5</span
             >
           </div>
         </div>
       </div>
     </section>
+
+    <!-- Script for Map Pin Hover Interaction -->
+    <script>
+      function highlightPin(id) {
+        const card = document.getElementById(`card-preview-${id}`);
+        const pin = document.getElementById(`pin-${id}`);
+        if (card && pin) {
+          card.classList.remove(
+            "opacity-0",
+            "pointer-events-none",
+            "translate-y-2",
+          );
+          card.classList.add(
+            "opacity-100",
+            "pointer-events-auto",
+            "translate-y-0",
+          );
+          pin.classList.add("scale-125", "z-40");
+        }
+      }
+
+      function unhighlightPin(id) {
+        const card = document.getElementById(`card-preview-${id}`);
+        const pin = document.getElementById(`pin-${id}`);
+        if (card && pin) {
+          card.classList.add(
+            "opacity-0",
+            "pointer-events-none",
+            "translate-y-2",
+          );
+          card.classList.remove(
+            "opacity-100",
+            "pointer-events-auto",
+            "translate-y-0",
+          );
+          pin.classList.remove("scale-125", "z-40");
+        }
+      }
+    </script>
+
+    <!-- 5. Pricing Section -->
     <section class="max-w-7xl mx-auto px-6 py-12 text-center">
       <h2 class="text-3xl sm:text-4xl font-bold text-slate-800 tracking-tight">
         Pricing of Our Agency
@@ -315,7 +708,10 @@
       <p class="text-slate-600 text-sm mt-1 font-medium">
         Choose A Package That's Right For You
       </p>
+
+      <!-- Pricing Cards Grid -->
       <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Budget Package -->
         <div
           class="bg-white rounded-3xl p-8 shadow-md border border-slate-100 text-left flex flex-col justify-between hover:shadow-xl transition-shadow"
         >
@@ -330,7 +726,9 @@
               <span class="text-4xl font-extrabold text-slate-900">500$</span>
             </div>
             <p class="text-xs text-slate-500 mt-1">Essentials Covered</p>
+
             <hr class="my-6 border-slate-100" />
+
             <h5
               class="text-xs font-bold text-slate-800 uppercase tracking-wider mb-4"
             >
@@ -355,12 +753,15 @@
               </li>
             </ul>
           </div>
+
           <button
             class="mt-8 w-full py-3 rounded-2xl bg-[#9fc5d7] text-slate-800 font-bold text-xs hover:bg-[#8eb8cc] transition-colors shadow-sm"
           >
             Select package
           </button>
         </div>
+
+        <!-- Standard Package -->
         <div
           class="bg-white rounded-3xl p-8 shadow-md border border-slate-100 text-left flex flex-col justify-between relative hover:shadow-xl transition-shadow"
         >
@@ -381,7 +782,9 @@
               >
             </div>
             <p class="text-xs text-slate-500 mt-1">Balanced Adventure</p>
+
             <hr class="my-6 border-slate-100" />
+
             <h5
               class="text-xs font-bold text-slate-800 uppercase tracking-wider mb-4"
             >
@@ -406,12 +809,15 @@
               </li>
             </ul>
           </div>
+
           <button
             class="mt-8 w-full py-3 rounded-2xl bg-[#9fc5d7] text-slate-800 font-bold text-xs hover:bg-[#8eb8cc] transition-colors shadow-sm"
           >
             Select package
           </button>
         </div>
+
+        <!-- Luxury Package -->
         <div
           class="bg-white rounded-3xl p-8 shadow-md border border-slate-100 text-left flex flex-col justify-between hover:shadow-xl transition-shadow"
         >
@@ -426,7 +832,9 @@
               <span class="text-4xl font-extrabold text-slate-900">1200$</span>
             </div>
             <p class="text-xs text-slate-500 mt-1">Ultimate Comfort</p>
+
             <hr class="my-6 border-slate-100" />
+
             <h5
               class="text-xs font-bold text-slate-800 uppercase tracking-wider mb-4"
             >
@@ -451,6 +859,7 @@
               </li>
             </ul>
           </div>
+
           <button
             class="mt-8 w-full py-3 rounded-2xl bg-[#9fc5d7] text-slate-800 font-bold text-xs hover:bg-[#8eb8cc] transition-colors shadow-sm"
           >
@@ -459,9 +868,12 @@
         </div>
       </div>
     </section>
+
+    <!-- 6. Footer -->
     <footer
       class="max-w-7xl mx-auto px-6 py-12 flex flex-col sm:flex-row items-center justify-between gap-4"
     >
+      <!-- Social Buttons -->
       <div class="flex items-center space-x-4">
         <a
           href="#"
@@ -476,6 +888,8 @@
           <span>Instagram</span>
         </a>
       </div>
+
+      <!-- Footer Logo -->
       <div
         class="flex items-center space-x-2 text-slate-800 font-bold text-xl tracking-tight"
       >
